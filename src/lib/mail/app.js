@@ -38,6 +38,8 @@ RECIPIENTS.forEach((recepient) => {
         <br/>
         <img src='cid:hey@unique.value'/><br/>
         <a href="${WEBSITE}/${encrypt}" target="_blank"><img src='cid:participate@unique.value'/></a>
+        <br/>
+        <p><strong><a href="https://github.com/abhishek-mane/secret-santa.git">Click here</a></strong> if you are interested to look at algorithm used.</p>
     `;
 
     sendMail(options, (err, info) => {
