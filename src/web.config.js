@@ -31,5 +31,5 @@ module.exports = {
         pass: '51254248',
         from: 'santa@merrychristmas.com'
     },
-    WEBSITE: 'http://localhost:8088'
+    WEBSITE: 'https://secret-santa-isotonic-operand.eu-de.mybluemix.net'
 }

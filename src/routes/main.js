@@ -1,5 +1,5 @@
 const
-    CryptoJS = require("crypto-js"),
+    logger = require(global.webconfig.logging.logger),
     path = require('path'),
     express = require('express'),
     router = express.Router(),
@@ -8,7 +8,6 @@ const
     } = require(global.webconfig.path.middlewares);
 
 router.get('/:id', (req, res) => {
-
     try {
         console.log(req.params.id)
         const
@@ -16,8 +15,6 @@ router.get('/:id', (req, res) => {
             jsonDB = require('node-json-db'),
             participantsDB = new jsonDB(`${global.webconfig.path.models}/defaultParticipants`, true, false),
             participants = participantsDB.getData('/');
-        
-        console.log(santa)
 
         if (participants.indexOf(santa) > -1) {
             const { getMatch } = require(path.join(global.webconfig.path.lib, 'shuffler'));
@@ -26,6 +23,7 @@ router.get('/:id', (req, res) => {
                     logger.error(err);
                     return unauthorized(res);
                 }
+                logger.info(`${santa} is secret santa of ${match}`);
                 return res.render('index.html', {
                     name: match
                 });

@@ -1,5 +1,5 @@
 ---
 applications:
-- name: Air-Quality-Minitoring-App
+- name: Secret-Santa
   random-route: true
   memory: 2048M
