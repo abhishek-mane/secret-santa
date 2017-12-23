@@ -1,0 +1,7 @@
+# ignore nodejs modules & logs
+node_modules/
+npm-debug.log
+
+# ignore logs but push empty folder
+/logs/*
+!/logs/.gitkeep
