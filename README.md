@@ -1,5 +1,5 @@
-# Remote Monitoring Application
-Monitors and analyzes the deployed remote devices.
+# Secret Santa Distribution
+Distrubuting chits.
 ## Getting started
 1. Install required dependencies
     * Using npm
